@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKE Landing page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/0bcbd0197b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="./img/nike1.png" class="logo" data-aos="fade-right"></a>
+            <nav  data-aos="fade-left">
+                <ul>
+                    <li><a href=""><b>Home</b></a></li>
+                    <li><a href=""><b>Menu</b></a></li>
+                    <li><a href=""><b>What's new</b></a></li>
+                    <li><a href=""><b>Contact</b></a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <div class="textBox" data-aos="fade-right">
+                <h2>It's not just Shoes <br>It's <span>NIKE</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odio in repellat cum harum magnam omnis, aspernatur, amet cumque, repudiandae iure perferendis deleniti fugiat numquam iste? Cumque repellendus fuga accusantium dignissimos facere commodi provident quis. Obcaecati explicabo temporibus ut beatae?</p>
+                <a href="#"><b>Learn More</b></a>
+            </div>
+            <div class="imgBox" data-aos="fade-left">
+                <img src="./img/black.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><a href="#"><img src="./img/b1.png" onclick="imgSlider('./img/black.png'); changeCircleColor('black') "  ></a></li>
+            <li><a href="#"><img src="./img/b2.png" onclick="imgSlider('./img/blue_1.png'); changeCircleColor('blue') " ></a></li>
+            <li><a href="#"><img src="./img/b3.png" onclick="imgSlider('./img/green.png'); changeCircleColor('green') " ></a></li>
+        </ul>
+        <ul class="sci" data-aos="fade-left">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+        </ul>
+    </section>
+   <!--------------------------------------------------------------------------------------------------------------------------------------------------->
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+ AOS.init({
+    offset: 250,
+    duration: 1200,
+ });
+</script>
+</body>
+</html>
